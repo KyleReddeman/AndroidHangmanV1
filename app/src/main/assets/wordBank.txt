@@ -28,7 +28,7 @@ default
 multiple
 project
 retro
-ske
+ski
 page
 fusion
 atomic

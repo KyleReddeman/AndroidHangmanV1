@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorCorrect">#31FF11</color>
     <color name="colorIncorrect">#FF2B2B</color>
+    <color name="colorRepeat">#CECECE</color>
 </resources>

@@ -8,7 +8,7 @@ public class Board {
     private String word;
     private List<Character> usedLetters;
     private int incorrectCount;
-    private static final int MAX_INCORRECT = 8;
+    public static final int MAX_INCORRECT = 8;
 
     public Board(String word) {
         this.word = word;
@@ -40,6 +40,10 @@ public class Board {
         return letters;
     }
 
+    public String getWord() {
+        return word;
+    }
+
     public void addLetter(String s) {
         set(s);
         usedLetters.add(0, Character.toLowerCase(s.trim().charAt(0)));
@@ -49,7 +53,7 @@ public class Board {
         return usedLetters.contains(s.toLowerCase().trim().charAt(0));
     }
 
-    public void set(String s) {
+    private void set(String s) {
         s = s.trim();
         char c = s.charAt(0);
         c = Character.toLowerCase(c);
@@ -60,29 +64,12 @@ public class Board {
         }
     }
 
-    public boolean won() {
+    public String getWorkingWord() {
         String workingWord = "";
         for (int i = 0; i < length; i++) {
             workingWord += boardLetters[i];
         }
-        return word.equalsIgnoreCase(workingWord);
-    }
-
-    public boolean lose() {
-        return incorrectCount >= MAX_INCORRECT;
-    }
-
-    public boolean contains(String s) {
-        s = s.trim();
-        char c = s.charAt(0);
-        c = Character.toLowerCase(c);
-        for (int i = 0; i < length; i++) {
-            if (c == Character.toLowerCase(word.charAt(i))) {
-                return true;
-            }
-        }
-        incorrectCount++;
-        return false;
+        return workingWord;
     }
 
     public String toString() {
