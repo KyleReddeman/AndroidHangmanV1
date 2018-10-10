@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HangmanV1</string>
+    <string name="button_submit">Submit</string>
+    <string name="text_EnterGuess">Enter Guess</string>
+    <string name="button_play">Play</string>
+    <string name="status_incorrect">Incorrect</string>
+    <string name="status_correct">Correct</string>
+    <string name="status_won">You Win!</string>
+    <string name="status_lose">You Lose!</string>
+</resources>
