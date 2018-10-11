@@ -27,6 +27,8 @@ public class GamePlay extends AppCompatActivity {
         gameManager.guess(guess);
         updateBoardText();
         updateStatusText();
+        updateInorrectText();
+        updateUsedLettersText();
         guessTextField.setText("");
         guessTextField.setHint(R.string.text_EnterGuess);
     }
@@ -34,6 +36,18 @@ public class GamePlay extends AppCompatActivity {
     private void updateBoardText() {
         TextView boardText = findViewById(R.id.textView);
         boardText.setText(gameManager.getBoard().toString());
+    }
+
+    private void updateUsedLettersText() {
+        TextView usedLettersText = findViewById(R.id.textView5);
+        usedLettersText.setText(gameManager.getBoard().usedLetters());
+    }
+
+    private void updateInorrectText() {
+        TextView incorrectText = findViewById(R.id.textView4);
+        String text = getString(R.string.text_incorrect_guesses);
+        incorrectText.setText(text + gameManager.getIncorrectCount() + "/" + GameManager.MAX_INCORRECT);
+
     }
 
     private void updateStatusText() {

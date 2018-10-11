@@ -12,10 +12,10 @@ import java.util.Random;
 
 public class GameManager {
 
-    private static final int MAX_INCORRECT = 8;
     private int incorrectCount;
     private Board board;
     private int status;
+    public static final int MAX_INCORRECT = 8;
     public static final int STATUS_CORRECT = 0;
     public static final int STATUS_INCORRECT = 1;
     public static final int STATUS_WON = 2;
@@ -55,6 +55,10 @@ public class GameManager {
 
     public int getStatus() {
         return status;
+    }
+
+    public int getIncorrectCount() {
+        return incorrectCount;
     }
 
     public Board getBoard() {

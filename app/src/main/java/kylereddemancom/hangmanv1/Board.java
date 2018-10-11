@@ -35,7 +35,7 @@ public class Board {
             letters += usedLetters.get(0);
         }
         for (int i = 1; i < usedLetters.size(); i++) {
-            letters += "," + usedLetters.get(i);
+            letters += ", " + usedLetters.get(i);
         }
         return letters;
     }
